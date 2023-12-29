@@ -30,62 +30,29 @@ void convolution3D(
 
     // Convolution implementation
     for (int f = 0; f < NUM_FILTERS; ++f) {
-        for (int i = 0; i < output_size; ++i) {  // Output rows
-            for (int j = 0; j < output_size; ++j) {  // Output columns
-                FixedPoint sum = 0;
-
+        for (int i = 0; i < output_size; ++i) {
+            for (int j = 0; j < output_size; ++j) {
+                output[f][i][j] = 0;
                 for (int c = 0; c < INPUT_CHANNELS; ++c) {
-                    for (int fi = 0; fi < FILTER_SIZE; ++fi) {  // Rows
-                        for (int fj = 0; fj < FILTER_SIZE; ++fj) {  // Columns
-                            sum += input[c][i * STRIDE + fi][j * STRIDE + fj] *
-                                   filters[f][c][fi][fj];
+                    for (int k = 0; k < FILTER_SIZE; ++k) {
+                        for (int l = 0; l < FILTER_SIZE; ++l) {
+                            output[f][i][j] += input[c][STRIDE * i + k][STRIDE * j + l] * filters[f][c][k][l];
                         }
                     }
                 }
-
-                // Add bias
-                sum += biases[f];
-
+                output[f][i][j] += biases[f];
+                // ReLU activation
+                output[f][i][j] = output[f][i][j] > FixedPoint(0) ? output[f][i][j] : FixedPoint(0);
             }
         }
     }
 }
 
 int main() {
-    // Sample input, filters, and biases
-    FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE] = {{{1}}};  // Initialize with your actual data
-    FixedPoint filters[NUM_FILTERS][INPUT_CHANNELS][FILTER_SIZE][FILTER_SIZE] = {{{{1}}}};  // Initialize with your actual data
-    FixedPoint biases[NUM_FILTERS] = {1};  // Initialize with your actual data
-
-
-    FixedPoint output[NUM_FILTERS][OUTPUT_SIZE][OUTPUT_SIZE];
-
-
-    // Convolution
+    FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE];
+    FixedPoint filters[NUM_FILTERS][INPUT_CHANNELS][FILTER_SIZE][FILTER_SIZE];
+    FixedPoint biases[NUM_FILTERS];
     convolution3D(input, filters, biases, OUTPUT_SIZE);
-
-
-    for (int f = 0; f < NUM_FILTERS; ++f) {
-        for (int i = 0; i < OUTPUT_SIZE; ++i) {
-            for (int j = 0; j < OUTPUT_SIZE; ++j) {
-                int output_index = f * OUTPUT_SIZE * OUTPUT_SIZE + i * OUTPUT_SIZE + j;
-
-                // Apply ReLU activation
-                output[f][i][j] = (output[f][i][j] > 0) ? output[f][i][j] : FixedPoint(0);
-            }
-        }
-    }
-
-    // Display result (for illustration)
-   /* for (int f = 0; f < NUM_FILTERS; ++f) {
-        for (int i = 0; i < output_size; ++i) {
-            for (int j = 0; j < output_size; ++j) {
-                cout << output[f][i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }*/
-
     return 0;
 }
+
