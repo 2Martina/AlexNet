@@ -64,7 +64,7 @@ int main() {
     vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
 
     // Display result (for illustration)
-    for (int c = 0; c < INPUT_CHANNELS; ++c) {
+  /*  for (int c = 0; c < INPUT_CHANNELS; ++c) {
         for (int i = 0; i < poolingResult[0].size(); ++i) {
             for (int j = 0; j < poolingResult[0][0].size(); ++j) {
                 cout << poolingResult[c][i][j] << " ";
@@ -72,7 +72,7 @@ int main() {
             cout << endl;
         }
         cout << endl;
-    }
+    }*/
 
     return 0;
 }
