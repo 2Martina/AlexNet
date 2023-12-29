@@ -70,17 +70,5 @@ int main()
     // call normalization function
     normalization(input, output, gamma, beta);
 
-    // print output
-    cout << "output: " << endl;
-    for (int i = 0; i < 96; ++i) { // number of channels
-        for (int j = 0; j < 27; ++j) { // number of rows
-            for (int k = 0; k < 27; ++k) { // number of columns
-                cout << output[j][k][i] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }
-
     return 0;
 }
