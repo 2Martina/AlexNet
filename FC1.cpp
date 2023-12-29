@@ -23,7 +23,7 @@ void fullyConnected(FixedPoint input [9216],FixedPoint output [4096],FixedPoint 
         }
         output[i] += bias[i];
         // ReLU activation
-        output[i] = output[i] > 0 ? output[i] : 0;
+        output[i] = output[i] > FixedPoint(0) ? output[i] : FixedPoint(0);
     }
 }
 

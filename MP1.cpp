@@ -75,15 +75,5 @@ int main() {
     FPType poolingResult[27][27][96];
     maxPooling(convolutionOutput, poolingResult);
 
-    // Display result (for illustration)
-    for (int c = 0; c < 96; ++c) {
-        for (int i = 0; i < 27; ++i) {
-            for (int j = 0; j < 27; ++j) {
-                cout << poolingResult[c][i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }
     return 0;
 }

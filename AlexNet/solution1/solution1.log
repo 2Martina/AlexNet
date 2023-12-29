@@ -1,0 +1,356 @@
+==============================================================
+File generated on Fri Dec 29 20:47:37 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MP1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from MP1.cpp:1:
+MP1.cpp:20:28: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                           ^~
+                           > > 
+MP1.cpp:20:76: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                                                                           ^~
+                                                                           > > 
+MP1.cpp:25:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> output(
+                               ^~
+                               > > 
+MP1.cpp:27:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(output_size, vector<FPType>(output_size, 0))
+                            ^~
+                            > >
+MP1.cpp:58:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> convolutionOutput(
+                               ^~
+                               > > 
+MP1.cpp:60:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                            ^~
+                            > >
+MP1.cpp:60:32: error: use of undeclared identifier 'input_size'
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                               ^
+MP1.cpp:64:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
+                               ^~
+                               > > 
+MP1.cpp:70:22: error: use of overloaded operator '<<' is ambiguous (with operand types 'ostream' (aka 'basic_ostream<char>') and 'ap_fixed<16, 7, 0, 3, 0>')
+                cout << poolingResult[c][i][j] << " ";
+                ~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:164:7: note: candidate function
+      operator<<(long __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:168:7: note: candidate function
+      operator<<(unsigned long __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:172:7: note: candidate function
+      operator<<(bool __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:176:7: note: candidate function
+      operator<<(short __n);
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:179:7: note: candidate function
+      operator<<(unsigned short __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:187:7: note: candidate function
+      operator<<(int __n);
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:190:7: note: candidate function
+      operator<<(unsigned int __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:199:7: note: candidate function
+      operator<<(long long __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:203:7: note: candidate function
+      operator<<(unsigned long long __n)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:208:7: note: candidate function
+      operator<<(double __f)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:212:7: note: candidate function
+      operator<<(float __f)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:220:7: note: candidate function
+      operator<<(long double __f)
+      ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:459:5: note: candidate function [with _Traits = std::char_traits<char>]
+    operator<<(basic_ostream<char, _Traits>& __out, char __c)
+    ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:453:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>]
+    operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+    ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:465:5: note: candidate function [with _Traits = std::char_traits<char>]
+    operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+    ^
+E:/Vivado/Vivado/2018.3/win64/tools/clang/bin\..\lib\clang\3.1/../../../include/c++/4.5.2\ostream:470:5: note: candidate function [with _Traits = std::char_traits<char>]
+    operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+    ^
+9 errors generated.
+==============================================================
+File generated on Fri Dec 29 20:48:33 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MP1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from MP1.cpp:1:
+MP1.cpp:20:28: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                           ^~
+                           > > 
+MP1.cpp:20:76: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                                                                           ^~
+                                                                           > > 
+MP1.cpp:25:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> output(
+                               ^~
+                               > > 
+MP1.cpp:27:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(output_size, vector<FPType>(output_size, 0))
+                            ^~
+                            > >
+MP1.cpp:58:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> convolutionOutput(
+                               ^~
+                               > > 
+MP1.cpp:60:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                            ^~
+                            > >
+MP1.cpp:60:32: error: use of undeclared identifier 'input_size'
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                               ^
+MP1.cpp:64:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
+                               ^~
+                               > > 
+8 errors generated.
+==============================================================
+File generated on Fri Dec 29 20:55:12 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MP1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from MP1.cpp:1:
+MP1.cpp:20:28: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                           ^~
+                           > > 
+MP1.cpp:20:76: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                                                                           ^~
+                                                                           > > 
+MP1.cpp:25:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> output(
+                               ^~
+                               > > 
+MP1.cpp:27:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(output_size, vector<FPType>(output_size, 0))
+                            ^~
+                            > >
+MP1.cpp:58:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> convolutionOutput(
+                               ^~
+                               > > 
+MP1.cpp:60:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                            ^~
+                            > >
+MP1.cpp:60:32: error: use of undeclared identifier 'input_size'
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                               ^
+MP1.cpp:64:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
+                               ^~
+                               > > 
+8 errors generated.
+==============================================================
+File generated on Fri Dec 29 20:55:38 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MP1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from MP1.cpp:1:
+MP1.cpp:20:28: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                           ^~
+                           > > 
+MP1.cpp:20:76: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                                                                           ^~
+                                                                           > > 
+MP1.cpp:25:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> output(
+                               ^~
+                               > > 
+MP1.cpp:27:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(output_size, vector<FPType>(output_size, 0))
+                            ^~
+                            > >
+MP1.cpp:58:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> convolutionOutput(
+                               ^~
+                               > > 
+MP1.cpp:60:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                            ^~
+                            > >
+MP1.cpp:60:32: error: use of undeclared identifier 'input_size'
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                               ^
+MP1.cpp:64:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
+                               ^~
+                               > > 
+8 errors generated.
+==============================================================
+File generated on Fri Dec 29 20:56:13 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'MP1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from MP1.cpp:1:
+MP1.cpp:20:28: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                           ^~
+                           > > 
+MP1.cpp:20:76: error: a space is required between consecutive right angle brackets (use '> >')
+vector<vector<vector<FPType>>> maxPooling(const vector<vector<vector<FPType>>>& input) {
+                                                                           ^~
+                                                                           > > 
+MP1.cpp:25:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> output(
+                               ^~
+                               > > 
+MP1.cpp:27:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(output_size, vector<FPType>(output_size, 0))
+                            ^~
+                            > >
+MP1.cpp:58:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> convolutionOutput(
+                               ^~
+                               > > 
+MP1.cpp:60:29: error: a space is required between consecutive right angle brackets (use '> >')
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                            ^~
+                            > >
+MP1.cpp:60:32: error: use of undeclared identifier 'input_size'
+        vector<vector<FPType>>(input_size, vector<FPType>(input_size, 1))
+                               ^
+MP1.cpp:64:32: error: a space is required between consecutive right angle brackets (use '> >')
+    vector<vector<vector<FPType>>> poolingResult = maxPooling(convolutionOutput);
+                               ^~
+                               > > 
+8 errors generated.
+==============================================================
+File generated on Fri Dec 29 20:56:54 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FC1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from FC1.cpp:1:
+FC1.cpp:26:35: error: conditional expression is ambiguous; 'FixedPoint' (aka 'ap_fixed<16, 7, AP_RND>') can be converted to 'int' and vice versa
+        output[i] = output[i] > 0 ? output[i] : 0;
+                                  ^ ~~~~~~~~~   ~
+In file included from FC1.cpp:1:
+In file included from FC1.cpp:3:
+In file included from E:/Vivado/Vivado/2018.3/common/technology/autopilot\ap_fixed.h:55:
+E:/Vivado/Vivado/2018.3/common/technology/autopilot\ap_fixed_base.h:837:13: warning: shift count is negative [-Wshift-count-negative]
+      ret.V <<= (_AP_I - _AP_W);
+            ^   ~~~~~~~~~~~~~~~
+E:/Vivado/Vivado/2018.3/common/technology/autopilot\ap_fixed_base.h:868:69: note: in instantiation of member function 'ap_fixed_base<16, 7, true, 0, 3, 0>::to_ap_int_base' requested here
+  inline __attribute__((always_inline)) int to_int() const { return to_ap_int_base().to_int(); }
+                                                                    ^
+E:/Vivado/Vivado/2018.3/common/technology/autopilot\ap_fixed_base.h:1041:71: note: in instantiation of member function 'ap_fixed_base<16, 7, true, 0, 3, 0>::to_int' requested here
+  inline __attribute__((always_inline)) operator int() const { return to_int(); }
+                                                                      ^
+FC1.cpp:26:37: note: in instantiation of member function 'ap_fixed_base<16, 7, true, 0, 3, 0>::operator int' requested here
+        output[i] = output[i] > 0 ? output[i] : 0;
+                                    ^
+1 warning and 1 error generated.
+==============================================================
+File generated on Fri Dec 29 21:01:53 +0200 2023
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FC1.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:35 . Memory (MB): peak = 102.727 ; gain = 17.980
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 102.727 ; gain = 17.980
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:42 . Memory (MB): peak = 112.605 ; gain = 27.859
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:42 . Memory (MB): peak = 118.492 ; gain = 33.746
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:44 . Memory (MB): peak = 145.039 ; gain = 60.293
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 145.562 ; gain = 60.816
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fullyConnected' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fullyConnected' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 46.515 seconds; current allocated memory: 95.994 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.988 seconds; current allocated memory: 96.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fullyConnected' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fullyConnected/input_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fullyConnected/output_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fullyConnected/weights_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fullyConnected/bias_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fullyConnected' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fullyConnected_mul_mul_16s_16s_32_1_1' to 'fullyConnected_mubkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fullyConnected_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fullyConnected'.
+INFO: [HLS 200-111]  Elapsed time: 0.789 seconds; current allocated memory: 96.784 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 146.555 ; gain = 61.809
+INFO: [SYSC 207-301] Generating SystemC RTL for fullyConnected.
+INFO: [VHDL 208-304] Generating VHDL RTL for fullyConnected.
+INFO: [VLOG 209-307] Generating Verilog RTL for fullyConnected.
+INFO: [HLS 200-112] Total elapsed time: 53.327 seconds; peak allocated memory: 96.784 MB.
