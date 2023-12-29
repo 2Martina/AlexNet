@@ -8,7 +8,8 @@ using namespace std;
 const int INPUT_CHANNELS = 3;
 const int FILTER_SIZE = 11;
 const int STRIDE = 4;
-const int NUM_FILTERS = 96;*/
+const int NUM_FILTERS = 96;
+const int OUTPUT_SIZE= 55;*/
 
 
 #define INPUT_SIZE 227
@@ -26,13 +27,16 @@ void convolution3D( FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE],
                     FixedPoint biases[NUM_FILTERS]) {
 
     // Convolution implementation
-    for (int f = 0; f < NUM_FILTERS; ++f) {
-        for (int i = 0; i < OUTPUT_SIZE; ++i) {
-            for (int j = 0; j < OUTPUT_SIZE; ++j) {
+
+
+L1:    for (int f = 0; f < NUM_FILTERS; ++f) {
+   L2:     for (int i = 0; i < OUTPUT_SIZE; ++i) {
+      L3:      for (int j = 0; j < OUTPUT_SIZE; ++j) {
                 output[f][i][j] = 0;
-                for (int c = 0; c < INPUT_CHANNELS; ++c) {
-                    for (int k = 0; k < FILTER_SIZE; ++k) {
-                        for (int l = 0; l < FILTER_SIZE; ++l) {
+         L4:       for (int c = 0; c < INPUT_CHANNELS; ++c) {
+            L5:        for (int k = 0; k < FILTER_SIZE; ++k) {
+#pragma HLS pipeline
+               L6:         for (int l = 0; l < FILTER_SIZE; ++l) {
                             output[f][i][j] += input[c][STRIDE * i + k][STRIDE * j + l] * filters[f][c][k][l];
                         }
                     }
