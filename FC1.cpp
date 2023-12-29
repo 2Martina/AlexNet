@@ -26,3 +26,13 @@ void fullyConnected(FixedPoint input [9216],FixedPoint output [4096],FixedPoint 
         output[i] = output[i] > 0 ? output[i] : 0;
     }
 }
+
+int main()
+{
+    FixedPoint input[9216];
+    FixedPoint output[4096];
+    FixedPoint weights[9216][4096];
+    FixedPoint bias[4096];
+    fullyConnected(input,output,weights,bias);
+    return 0;
+}
