@@ -64,7 +64,7 @@ void maxPooling(FPType input[55][55][96],FPType output[27][27][96]) {
         }
     }
 
-    return output;
+    //return output;
 }
 
 int main() {
