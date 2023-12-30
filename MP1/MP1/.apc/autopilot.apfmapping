@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="MP1.cpp" path="E:\Martina\Senior2\ML\AlexNet\MP1\MP1.cpp"/>
+    <originFiles name="MP1.cpp" path="E:\Martina\Senior2\ML\AlexNet\MP1\MP1.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
