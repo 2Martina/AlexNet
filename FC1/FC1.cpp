@@ -1,8 +1,5 @@
 //____________FullyConnected1_______________
-#include <iostream>
-#include <ap_fixed.h> //class template from the Vivado-HLS library
-typedef ap_fixed<16,7,AP_RND> FixedPoint;  //total:16 , fractional:7 , rounding to the nearest representable value
-using namespace std;
+#include "FC1.h"
 
 // fully connected takes a flattened array of FixedPoint as input
 // i.e. a 1D array of size n
@@ -25,14 +22,4 @@ void fullyConnected(FixedPoint input [9216],FixedPoint output [4096],FixedPoint 
         // ReLU activation
         output[i] = output[i] > FixedPoint(0) ? output[i] : FixedPoint(0);
     }
-}
-
-int main()
-{
-    FixedPoint input[9216];
-    FixedPoint output[4096];
-    FixedPoint weights[9216][4096];
-    FixedPoint bias[4096];
-    fullyConnected(input,output,weights,bias);
-    return 0;
 }

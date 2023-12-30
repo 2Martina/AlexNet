@@ -1,8 +1,4 @@
-#include <iostream>
-#include <ap_fixed.h>
-
-typedef ap_fixed<16, 7, AP_RND> FixedPoint;
-using namespace std;
+#include "C1.h"
 
 /*const int INPUT_SIZE = 227;
 const int INPUT_CHANNELS = 3;
@@ -10,15 +6,6 @@ const int FILTER_SIZE = 11;
 const int STRIDE = 4;
 const int NUM_FILTERS = 96;
 //const int OUTPUT_SIZE= 55;*/
-
-
-#define INPUT_SIZE 227
-#define INPUT_CHANNELS 3
-#define FILTER_SIZE 11
-#define STRIDE 4
-#define NUM_FILTERS 96
-#define OUTPUT_SIZE 55
-
 
 // Function to perform fixed-point 3D convolution
 void convolution3D( FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE],
@@ -48,13 +35,3 @@ L1:    for (int f = 0; f < NUM_FILTERS; ++f) {
         }
     }
 }
-
-int main() {
-    FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE];
-    FixedPoint output[NUM_FILTERS][OUTPUT_SIZE][OUTPUT_SIZE];
-    FixedPoint filters[NUM_FILTERS][INPUT_CHANNELS][FILTER_SIZE][FILTER_SIZE];
-    FixedPoint biases[NUM_FILTERS];
-    convolution3D(input,output,filters, biases);
-    return 0;
-}
-
