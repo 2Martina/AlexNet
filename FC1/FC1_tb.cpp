@@ -10,8 +10,8 @@ void fc6_b( FixedPoint biases[4096]) {
             file >> line; 
             biases[i] = stof(line);
         }
+        file.close();
     }
-    file.close();
 }
 
 void fc6_w( FixedPoint weights[9216][4096]) {
@@ -24,8 +24,8 @@ void fc6_w( FixedPoint weights[9216][4096]) {
                 weights[c][f] = stof(line);
             }
         }
+        file.close();
     }
-    file.close();
 }
 
 // will read from input image 9216 values and store them in input
@@ -38,8 +38,8 @@ void loadInput(FixedPoint input[9216]) {
             file >> line;
             input[i] = stof(line);
         }
+        file.close();
     }
-    file.close();
 }
 
 int main()

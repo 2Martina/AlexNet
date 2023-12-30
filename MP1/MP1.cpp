@@ -1,13 +1,6 @@
 //_______MaxPooling1_______
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
-#include <ap_fixed.h>
-// Fixed-point data type and scaling factor
-typedef ap_fixed<16, 7, AP_RND> FPType;
+#include "MP1.h"
 
 const int INPUT_CHANNELS = 96;
 const int INPUT_SIZE = 55;
@@ -65,15 +58,4 @@ void maxPooling(FPType input[55][55][96],FPType output[27][27][96]) {
     }
 
     //return output;
-}
-
-int main() {
-    // Sample input (output from a convolution layer), using the previous example
-    FPType convolutionOutput[55][55][96];
-
-    // Max pooling
-    FPType poolingResult[27][27][96];
-    maxPooling(convolutionOutput, poolingResult);
-
-    return 0;
 }

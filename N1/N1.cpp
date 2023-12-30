@@ -1,9 +1,5 @@
 //____________Normalization1_____________
-#include <iostream>
-#include <cmath>
-#include <ap_fixed.h> //class template from the Vivado-HLS library
-typedef ap_fixed<16,7,AP_RND> FixedPoint;  //total:16 , fractional:7 , rounding to the nearest representable value
-using namespace std;
+#include "N1.h"
 
 // Function to perform fixed-point normalization
 void normalization(FixedPoint input[27][27][96], FixedPoint output[27][27][96]) {
@@ -21,12 +17,4 @@ void normalization(FixedPoint input[27][27][96], FixedPoint output[27][27][96]) 
             }
         }
     }
-}
-
-// call function and print values for illustration
-int main() {
-    FixedPoint input[27][27][96];
-    FixedPoint output[27][27][96];
-    normalization(input, output);
-    return 0;
 }

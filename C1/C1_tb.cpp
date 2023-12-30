@@ -10,8 +10,8 @@ void loadConv1_b( FixedPoint biases[96]) {
             file >> valueAsString;
             biases[i] = stof(valueAsString);
         }
+        file.close();
     }
-    file.close();
 }
 
 void loadConv1_w( FixedPoint filters[96][3][11][11]) {
@@ -28,8 +28,8 @@ void loadConv1_w( FixedPoint filters[96][3][11][11]) {
                 }
             }
         }
+        file.close();
     }
-    file.close();
 }
 
 // load input img from file
@@ -45,8 +45,8 @@ void loadInputImage( FixedPoint input[3][227][227]) {
                 }
             }
         }
+        file.close();
     }
-    file.close();
 }
 
 int main()
