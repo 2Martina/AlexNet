@@ -1,3 +1,4 @@
 
-C1/.vscode/tasks.json
+C1/.vscode/*
 FC1/weights_and_biases/fc6_w.txt
+C1/matrix_mult_prj/*

@@ -1,0 +1,149 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'HP' on host 'desktop-au5u484' (Windows NT_amd64 version 6.2) on Sat Dec 30 12:37:17 +0200 2023
+INFO: [HLS 200-10] In directory 'G:/Sem9/Advanced_Electronics_1/AlexNet/C1'
+INFO: [HLS 200-10] Opening and resetting project 'G:/Sem9/Advanced_Electronics_1/AlexNet/C1/matrix_mult_prj'.
+INFO: [HLS 200-10] Adding design file 'C1.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'C1.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'C1_tb.cpp' to the project
+INFO: [HLS 200-10] Opening and resetting solution 'G:/Sem9/Advanced_Electronics_1/AlexNet/C1/matrix_mult_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../C1_tb.cpp in debug mode
+   Compiling ../../../../C1.cpp in debug mode
+   Generating csim.exe
+In file included from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_fpo.h:186,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_half.h:44,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_common.h:641,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_fixed.h:54,
+                 from ../../../../C1.h:3,
+                 from ../../../../C1_tb.cpp:1:
+G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_fpo.h:186:0,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_half.h:44,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_common.h:641,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_fixed.h:54,
+                 from ../../../../C1.h:3,
+                 from ../../../../C1_tb.cpp:1:
+G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_fpo.h:186,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_half.h:44,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_common.h:641,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_fixed.h:54,
+                 from ../../../../C1.h:3,
+                 from ../../../../C1.cpp:1:
+G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_fpo.h:186:0,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/hls_half.h:44,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_common.h:641,
+                 from G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/ap_fixed.h:54,
+                 from ../../../../C1.h:3,
+                 from ../../../../C1.cpp:1:
+G:/Sem9/Advanced_Electronics_1/Xilinx/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+input image:
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+
+
+output image:
+0.220703
+
+bias:
+-0.263672
+
+filter:
+-0.00976563 -0.00585938 0.0195313 0.0371094 -0.0234375 -0.015625 0.015625 -0.00390625 0.00585938 0.0136719 -0.00976563 
+0.0371094 0.0585938 0.0410156 -0.0253906 0.00195313 0.0117188 -0.0292969 -0.0273438 0.00195313 0.03125 -0.0429688 
+-0.015625 -0.0117188 0.0136719 0.0957031 -0.00390625 -0.0234375 0.0546875 0.0078125 0.046875 0.0175781 -0.00390625 
+0.0332031 0.0195313 -0.0332031 -0.0566406 0.0273438 0.00390625 0.00976563 0.00976563 0.0683594 0.0507813 -0.0175781 
+-0.0585938 -0.0136719 -0.0078125 -0.0136719 0.00195313 -0.015625 -0.00195313 0.0195313 0.0078125 0.00390625 -0.015625 
+-0.00585938 0.03125 0.00390625 0.0664063 -0.0175781 -0.0117188 0.00195313 -0.0078125 0.00585938 0.0273438 -0.00976563 
+0 -0.0078125 -0.0078125 -0.0195313 -0.0136719 -0.0253906 -0.00585938 0.00195313 0.00976563 0.0625 0.00195313 
+0.0234375 0.00585938 0.0195313 0.00585938 -0.0332031 0.0234375 -0.00195313 -0.0253906 0.0175781 0.0117188 0.015625 
+0.00585938 -0.0195313 0.046875 -0.0175781 0.03125 -0.0253906 0.00390625 -0.015625 -0.00585938 -0.00390625 0.0136719 
+-0.0449219 -0.0117188 -0.0175781 0.00390625 0.0078125 0.0117188 -0.00195313 0.0078125 0.015625 0.0488281 0.0410156 
+-0.0351563 -0.0292969 -0.0644531 -0.0371094 -0.00976563 -0.0195313 0.0175781 -0.0175781 0.00195313 0.00390625 0.0195313 
+
+0.126953 0.0136719 -0.0449219 -0.0527344 0.03125 0.015625 0.00585938 0.00390625 -0.0078125 -0.0214844 0.0292969 
+0.0195313 0.00585938 -0.015625 0 0.0117188 -0.0292969 -0.0136719 -0.046875 0.103516 0 -0.00390625 
+0.00390625 0.00390625 0.0117188 -0.00195313 0.0449219 -0.0117188 -0.00195313 -0.0566406 0.03125 0.0117188 0 
+-0.00585938 0.0371094 -0.0253906 -0.00976563 0.0078125 0.00976563 -0.00585938 0.0078125 0.00585938 0.00390625 0.0195313 
+-0.00390625 -0.0234375 -0.0078125 0.0117188 0.00585938 0.0078125 -0.101563 -0.00195313 -0.0234375 0.0136719 -0.0273438 
+0.00976563 -0.0234375 0.0371094 0.00195313 -0.0234375 -0.00195313 0.0136719 0.0214844 0.00976563 -0.0253906 0.0371094 
+0.0273438 0.046875 -0.0332031 -0.0078125 -0.0214844 0.00195313 -0.00195313 -0.015625 -0.046875 0.0136719 -0.0136719 
+-0.00585938 0.0253906 0.03125 0.00976563 -0.015625 0.0175781 0.0605469 0.0488281 -0.0390625 -0.0195313 -0.0585938 
+-0.0410156 -0.0117188 -0.0390625 0.015625 -0.0507813 0.00390625 0.0078125 -0.0175781 0.111328 0.0390625 0.0839844 
+-0.0078125 -0.0351563 -0.0410156 -0.0488281 -0.00390625 -0.0371094 0.0175781 0.0195313 0.0214844 -0.0253906 -0.0332031 
+-0.0117188 -0.0292969 -0.0332031 -0.03125 0.0488281 -0.0527344 -0.00585938 0.0078125 0.03125 -0.0078125 0.046875 
+
+0.00585938 -0.0664063 -0.015625 0 0.0429688 -0.0292969 -0.0195313 -0.015625 -0.0078125 -0.00585938 -0.0117188 
+-0.00585938 0.0136719 -0.00976563 -0.0429688 0.00195313 -0.0175781 -0.00585938 -0.00585938 0.0253906 0.0429688 0.03125 
+0.0078125 0 0.015625 0.0371094 0 -0.0214844 0.0078125 0.0078125 0 -0.0332031 0.0449219 
+-0.00390625 -0.0195313 -0.0136719 0.0117188 0.0175781 0.0175781 -0.0214844 0.0566406 0.00195313 0.0351563 -0.0253906 
+0.00585938 -0.0253906 -0.00390625 -0.00390625 0 -0.0507813 0.00195313 -0.0214844 0.00195313 0.0234375 0.0234375 
+0.0175781 -0.00195313 0.0351563 0.0605469 0.0546875 -0.03125 -0.0195313 -0.0585938 -0.0449219 -0.015625 -0.0332031 
+0.0253906 -0.0488281 0.00585938 0.0078125 0.00976563 0.109375 -0.0117188 -0.0332031 0.0761719 0.0078125 0.0449219 
+0.00976563 -0.015625 0.0292969 0.0175781 -0.0410156 -0.0371094 -0.0332031 0.0371094 0.0214844 0.015625 0.0214844 
+0.0664063 -0.0332031 -0.0605469 -0.0136719 -0.00585938 -0.0273438 0 -0.0214844 0.00390625 0.015625 0 
+-0.00195313 -0.0234375 0.00195313 0.0371094 -0.00195313 0.0742188 0 -0.0214844 -0.00195313 0.0078125 0.0195313 
+0.046875 -0.0175781 0.00585938 -0.00195313 -0.00195313 -0.00976563 -0.015625 -0.0429688 -0.00976563 0.00585938 0.0117188 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Sat Dec 30 12:38:23 2023...

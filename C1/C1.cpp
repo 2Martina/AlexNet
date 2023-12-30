@@ -17,7 +17,7 @@ void convolution3D( FixedPoint input[INPUT_CHANNELS][INPUT_SIZE][INPUT_SIZE],
 
 
 L1:    for (int f = 0; f < NUM_FILTERS; ++f) {
-   L2:     for (int i = 0; i < OUTPUT_SIZE; ++i) {
+   L2:     for (int i = 0; i < OUTPUT_SIZE; ++i) { 
       L3:      for (int j = 0; j < OUTPUT_SIZE; ++j) {
                 output[f][i][j] = 0;
          L4:       for (int c = 0; c < INPUT_CHANNELS; ++c) {
@@ -35,3 +35,14 @@ L1:    for (int f = 0; f < NUM_FILTERS; ++f) {
         }
     }
 }
+
+
+
+/*
+loop number of filters i
+    loop on channels j
+        loop width k
+            loop height l
+               sum += input_img [i][j][k][l]  * filter [i][j][k][l]
+    out = sum + bias [i]
+*/

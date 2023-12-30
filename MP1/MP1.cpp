@@ -21,7 +21,7 @@ FPType max(FPType a[3][3]) {
 
 
 // Function to perform fixed-point max pooling
-void maxPooling(FPType input[55][55][96],FPType output[27][27][96]) {
+void maxPooling(FPType input[96][55][55],FPType output[96][27][27]) {
     int input_size = 55;
     int output_size = 27;
 
