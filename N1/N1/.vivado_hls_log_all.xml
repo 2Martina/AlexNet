@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Compilation errors found: In file included from N1.cpp:1:&#xD;&#xA;N1.cpp:22:25: error: use of undeclared identifier 'x'&#xD;&#xA;                    sum[x][y] += powf(input[x][y][i],2);&#xD;&#xA;                        ^&#xD;&#xA;N1.cpp:22:28: error: use of undeclared identifier 'y'&#xD;&#xA;                    sum[x][y] += powf(input[x][y][i],2);&#xD;&#xA;                           ^&#xD;&#xA;N1.cpp:22:45: error: use of undeclared identifier 'x'&#xD;&#xA;                    sum[x][y] += powf(input[x][y][i],2);&#xD;&#xA;                                            ^&#xD;&#xA;N1.cpp:22:48: error: use of undeclared identifier 'y'&#xD;&#xA;                    sum[x][y] += powf(input[x][y][i],2);&#xD;&#xA;                                               ^&#xD;&#xA;N1.cpp:34:34: error: use of undeclared identifier 'gamma'&#xD;&#xA;    normalization(input, output, gamma, beta);&#xD;&#xA;                                 ^&#xD;&#xA;5 errors generated.&#xD;&#xA;Failed during preprocessing.&#xD;&#xA;    while executing&#xD;&#xA;&quot;source E:/Martina/Senior2/ML/AlexNet/N1/N1/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main E:/Martina/Senior2/ML/AlexNet/N1/N1/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="N1" solutionName="solution1" date="2023-12-30T09:18:30.649+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,41 @@
+INFO: [HLS 200-10] Running 'E:/Vivado/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'User' on host 'martina' (Windows NT_amd64 version 6.2) on Sat Dec 30 09:18:17 +0200 2023
+INFO: [HLS 200-10] In directory 'E:/Martina/Senior2/ML/AlexNet/N1'
+INFO: [HLS 200-10] Opening project 'E:/Martina/Senior2/ML/AlexNet/N1/N1'.
+INFO: [HLS 200-10] Adding design file 'N1.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'N1.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'N1.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'E:/Martina/Senior2/ML/AlexNet/N1/N1/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'N1.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from N1.cpp:1:
+N1.cpp:22:25: error: use of undeclared identifier 'x'
+                    sum[x][y] += powf(input[x][y][i],2);
+                        ^
+N1.cpp:22:28: error: use of undeclared identifier 'y'
+                    sum[x][y] += powf(input[x][y][i],2);
+                           ^
+N1.cpp:22:45: error: use of undeclared identifier 'x'
+                    sum[x][y] += powf(input[x][y][i],2);
+                                            ^
+N1.cpp:22:48: error: use of undeclared identifier 'y'
+                    sum[x][y] += powf(input[x][y][i],2);
+                                               ^
+N1.cpp:34:34: error: use of undeclared identifier 'gamma'
+    normalization(input, output, gamma, beta);
+                                 ^
+5 errors generated.
+Failed during preprocessing.
+    while executing
+"source E:/Martina/Senior2/ML/AlexNet/N1/N1/solution1/csynth.tcl"
+    invoked from within
+"hls::main E:/Martina/Senior2/ML/AlexNet/N1/N1/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

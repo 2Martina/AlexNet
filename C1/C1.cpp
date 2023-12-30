@@ -9,7 +9,7 @@ const int INPUT_CHANNELS = 3;
 const int FILTER_SIZE = 11;
 const int STRIDE = 4;
 const int NUM_FILTERS = 96;
-const int OUTPUT_SIZE= 55;*/
+//const int OUTPUT_SIZE= 55;*/
 
 
 #define INPUT_SIZE 227

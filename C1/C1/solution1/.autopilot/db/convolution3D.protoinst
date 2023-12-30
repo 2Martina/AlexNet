@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"convolution3D": {
-			"proto_instances": {
-			}
-		}
-	}
-}

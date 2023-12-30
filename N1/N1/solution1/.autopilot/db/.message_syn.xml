@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;N1.cpp&apos; ..."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: In file included from N1.cpp:1:
+N1.cpp:22:25: error: use of undeclared identifier &apos;x&apos;
+                    sum[x][y] += powf(input[x][y][i],2);
+                        ^
+N1.cpp:22:28: error: use of undeclared identifier &apos;y&apos;
+                    sum[x][y] += powf(input[x][y][i],2);
+                           ^
+N1.cpp:22:45: error: use of undeclared identifier &apos;x&apos;
+                    sum[x][y] += powf(input[x][y][i],2);
+                                            ^
+N1.cpp:22:48: error: use of undeclared identifier &apos;y&apos;
+                    sum[x][y] += powf(input[x][y][i],2);
+                                               ^
+N1.cpp:34:34: error: use of undeclared identifier &apos;gamma&apos;
+    normalization(input, output, gamma, beta);
+                                 ^
+5 errors generated."/>
+</Messages>
